@@ -1,0 +1,17 @@
+<div class="card">
+<h2>Iniciar Sesión</h2>
+</div>
+<div class="container">
+<form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label">Usuario:</label>
+        <input type="text" class="form-control" formControlName="email" placeholder="Ingrese nombre de usuario">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Contraseña:</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Ingrese contraseña">
+    </div>
+    <button class="btn btn-primary" type="submit" value="Enviar">Enviar</button>
+</form>
+<button class="btn btn-secondary m-4" (click)="onClick()">Loguearse con una cuenta Google</button>
+</div>

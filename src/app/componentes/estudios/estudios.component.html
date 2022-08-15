@@ -1,0 +1,26 @@
+<section id="estudios">
+    <h1><span>──</span> Nivel Académico <span>──</span></h1>
+<div class="container">
+    <div *ngFor="let educacion of educacionList">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                <h4>{{educacion.school}}</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{educacion.title}}</h5>
+                    
+                    <p class="card-text">{{educacion.about}}<img [src]="educacion.img4" widht="250" height="100" class="rounded float-end" alt=""></p>
+                    
+                    <a [href]="educacion.web" class="btn btn-primary">Sitio Web</a>
+                </div>
+                <div class="card-footer-second">
+                    <p><time>{{educacion.start}}</time> - <time>{{educacion.end}}</time></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</section>

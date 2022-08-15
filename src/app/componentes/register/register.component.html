@@ -1,0 +1,20 @@
+<div class="card">
+    <h2>Registro de usuario</h2>
+</div>
+<div class="container">
+<form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label">Correo Electrónico:</label>
+        <input type="text" class="form-control" formControlName="email" placeholder="*campo obligatorio">
+        <div id="emailHelp" class="form-text">Dirección de correo válida.</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Contraseña:</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="*campo obligatorio">
+        <div id="emailHelp" class="form-text">Debe contener 6 carácteres o más.</div>
+    </div>
+    <button class="btn btn-primary" type="submit" value="Enviar">Enviar</button>
+
+    <button class="btn btn-secondary m-4" (click)="onClick()">Login</button>
+</form>
+</div>

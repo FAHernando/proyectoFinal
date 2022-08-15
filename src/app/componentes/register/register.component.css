@@ -1,0 +1,17 @@
+
+.card{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    background: linear-gradient(-50deg, rgb(43, 43, 43),rgb(34, 34, 34));
+    text-align: center;
+    color: rgb(187, 184, 184);
+    box-shadow: 2px 5px
+}
+.container{
+    border-radius: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 5px 15px;
+    margin-top: 30px;
+}

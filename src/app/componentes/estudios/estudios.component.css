@@ -1,0 +1,47 @@
+section{
+    background:rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    margin: auto;
+}
+span{
+    color:rgb(253, 72, 0);
+    text-shadow: 0 3px 8px rgb(255, 32, 3);
+}
+.card{
+    border: none;
+    background:rgba(0, 0, 0, 0);
+    margin-top: 20px;
+}
+.card-header{
+    border-radius: 10px;
+    box-shadow: 2px 5px 15px #646464;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(222, 222, 222);
+    background: linear-gradient(-90deg, rgb(233, 5, 5), rgb(253, 72, 0));
+    text-shadow: 0 0 8px black;
+}
+.card-body{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px #646464;
+}
+.card-body:hover{
+    transform: scale(1.1);
+    box-shadow: 0 3px 15px black;
+}
+.card-footer-second{
+    background: white;
+    text-align: center;
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+    padding-top: 10px;
+    margin: 10px;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 2px 3px 10px #646464; 
+}
