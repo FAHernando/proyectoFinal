@@ -13,8 +13,11 @@
         <input type="password" class="form-control" formControlName="password" placeholder="*campo obligatorio">
         <div id="emailHelp" class="form-text">Debe contener 6 carácteres o más.</div>
     </div>
-    <button class="btn btn-primary" type="submit" value="Enviar">Enviar</button>
-
-    <button class="btn btn-secondary m-4" (click)="onClick()">Login</button>
+    <input type="submit" value="Enviar" class="button">
+    <p>Al registrarte, aceptas los Términos y Condiciones, y Políticas de Privacidad</p>
+    <p class="separador">________________________________________________</p>
+    <p>¿Ya tienes una cuenta?<a class="link" (click)="onClick()"> Login</a></p>
+    
 </form>
 </div>
+
