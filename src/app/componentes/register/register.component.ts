@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/servicios/user.service';
+import { PortfolioAlexisService } from 'src/app/servicios/portfolio-alexis.service';
 
 @Component({
   selector: 'app-register',
@@ -13,19 +13,26 @@ export class RegisterComponent implements OnInit {
   formReg: FormGroup;
 
   constructor(
-    private userService: UserService,
-    private router: Router
+    private datosPortfolio:PortfolioAlexisService,
+    private router: Router,
+    private formbuilder:FormBuilder
   ) { 
     this.formReg = new FormGroup({
       email: new FormControl(),
       password: new FormControl()
-    })
+    }),
+    
+    this.formReg = this.formbuilder.group({
+      email: ['',[Validators.required, Validators.email]],
+      password:['',[Validators.required, Validators.minLength(6)]],
+      terminos:['',[Validators.required, Validators.requiredTrue]]
+  })
   }
 
   ngOnInit(): void {
   }
   onClick(){
-    this.userService.logout()
+    this.datosPortfolio.logout()
       .then(() => {
         this.router.navigate(['/login']);
       })
@@ -33,12 +40,21 @@ export class RegisterComponent implements OnInit {
   }
   
   onSubmit(){
-    this.userService.register(this.formReg.value)
+    this.datosPortfolio.register(this.formReg.value)
       .then(response => {
         console.log(response);
         this.router.navigate(['/login']);
       })
       .catch(error => console.log(error));
+  }
+  get Email()
+  {
+    return this.formReg.get('email');
+  }
+
+  get Password()
+  {
+    return this.formReg.get('password');
   }
 
 }

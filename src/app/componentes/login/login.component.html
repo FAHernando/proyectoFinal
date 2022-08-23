@@ -5,15 +5,36 @@
 <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
     <div class="mb-3">
         <label class="form-label">Usuario:</label>
-        <input type="text" class="form-control" formControlName="email" placeholder="Ingrese nombre de usuario">
+        <input type="text" class="form-control" formControlName="email" placeholder="Ingrese nombre de usuario"
+        [controlErrorsTpl]="emailError">
+
     </div>
     <div class="mb-3">
         <label class="form-label">Contraseña:</label>
-        <input type="password" class="form-control" formControlName="password" placeholder="Ingrese contraseña">
+        <input type="password" class="form-control" formControlName="password" placeholder="Ingrese contraseña"
+        [controlErrorsTpl]="passwordError">
     </div>
-    <input type="submit" value="Enviar" class="button">
+    <input type="submit" value="Enviar" class="button" [disabled]="formLogin.invalid">
 </form>
 <p class="separador">____________________________________</p>
 <p><a class="link" (click)="onClick()">Inicia Sesión con una cuenta de google</a></p> 
 <!--<button class="btn btn-secondary m-4" (click)="onClick()">Loguearse con una cuenta Google</button>-->
 </div>
+
+
+
+<!-- mensaje de error para el email-->
+<ng-template let-error let-text="text" #emailError>
+    <!--{{error | json}} {{text}}-->
+    <div *ngIf="error">
+        <i>* campo obligatorio</i>
+    </div>
+</ng-template>
+
+<!-- mensaje de error para el password-->
+<ng-template let-error let-text="text" #passwordError>
+    <!--{{error | json}} {{text}}-->
+    <div *ngIf="error">
+        <i>La contraseña debe contener 6 o más carácteres.</i>
+    </div>
+</ng-template>

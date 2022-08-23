@@ -18,6 +18,8 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoutComponent } from './componentes/logout/logout.component';
+import { ErrorTailorModule } from '@ngneat/error-tailor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +40,16 @@ import { LogoutComponent } from './componentes/logout/logout.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ErrorTailorModule.forRoot({
+      errors:{
+        useValue:{
+          required: 'campo requerido',
+          minlength: ({requiredLength, actualLength}) =>
+            'Expect ${requiredLength} but got ${actualLength}',
+          invalidAddress: error => 'El correo no es válido'
+        }
+      }
+    }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())
   ],

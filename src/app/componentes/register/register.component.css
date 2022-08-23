@@ -30,6 +30,9 @@
 .button:hover{
     background: cadetblue;
 }
+.button:disabled{
+    background: gray;
+}
 p{
     text-align: center;
 }
@@ -41,4 +44,13 @@ p{
 }
 .separador{
     color: gray;
+}
+input.ng-invalid.ng-touched{
+    border: solid 2px rgb(223, 43, 43);
+}
+input.ng-valid{
+    border: solid 2px rgb(0, 143, 0);
+}
+i{
+    color: rgb(223, 43, 43);
 }
