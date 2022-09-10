@@ -45,3 +45,20 @@ span{
     border-bottom-right-radius: 10px;
     box-shadow: 2px 3px 10px #646464; 
 }
+.fa-solid.fa-circle-plus{
+    font-size: 25px;
+}
+.btn-secondary:hover{
+    background: rgb(41, 41, 41);
+}
+.card-footer-tercero{
+    background: rgb(107, 107, 107);
+    text-align: center;
+    font-size: 15px;
+    color:white;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px #646464; 
+    width: 100px;
+    margin: auto;
+    padding-top: 10px;
+}

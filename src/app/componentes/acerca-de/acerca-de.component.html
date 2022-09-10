@@ -1,6 +1,6 @@
 <section id="informacion">
     <h1><span>───</span> Sobre mí <span>───</span></h1>
-<div class="container">
+<div class="container" *ngFor='let apiRest of api'>
     <div class="row">
         <div class="col-sm-4">
             <div class="card">
@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <i data-bs-toggle="mesaje" title="Ubicación" class="fa-solid fa-house"></i>
                     <h5 class="card-title">── UBICACIÓN ──</h5>
-                    <h5>{{miPorfolio.ubicacion}}</h5>
+                    <h5>{{apiRest.direccion}}</h5>
                     <p class="card-text"></p>
                 </div>
                 
@@ -45,7 +45,7 @@
                 <div class="card-body">
                     <i  data-bs-toggle="mensaje" title="Gmail" class="fa-solid fa-envelope"></i>
                     <h5 class="card-title">──── EMAIL ────</h5>
-                    <h5>{{miPorfolio.email}}</h5>
+                    <h5>{{apiRest.email}}</h5><!--miPorfolio.email-->
                     <p class="card-text"></p>
                 </div>
             </div>

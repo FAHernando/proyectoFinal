@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioAlexisService } from 'src/app/servicios/portfolio-alexis.service'
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +9,8 @@ import { PortfolioAlexisService } from 'src/app/servicios/portfolio-alexis.servi
 })
 export class NavbarComponent implements OnInit {
   educacionList:any;
-  constructor(private datosPortfolio:PortfolioAlexisService) { }
+  constructor(private datosPortfolio:PortfolioAlexisService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
@@ -17,6 +18,6 @@ export class NavbarComponent implements OnInit {
       this.educacionList=data.education;
     })
   }
-  
+ 
 
 }

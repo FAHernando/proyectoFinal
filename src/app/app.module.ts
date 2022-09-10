@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
@@ -19,6 +18,12 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoutComponent } from './componentes/logout/logout.component';
 import { ErrorTailorModule } from '@ngneat/error-tailor';
+import { ListaMensajesComponent } from './componentes/lista-mensajes/lista-mensajes.component';
+import { AgregarEstudioComponent } from './componentes/agregar-estudio/agregar-estudio.component';
+import { ModificarEstudioComponent } from './componentes/modificar-estudio/modificar-estudio.component';
+import { ExperienciaLaboralComponent } from './componentes/experiencia-laboral/experiencia-laboral.component';
+import { AgregarTrabajoComponent } from './componentes/agregar-trabajo/agregar-trabajo.component';
+import { ModificarTrabajoComponent } from './componentes/modificar-trabajo/modificar-trabajo.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,13 @@ import { ErrorTailorModule } from '@ngneat/error-tailor';
     MainComponent,
     LoginComponent,
     RegisterComponent,
-    LogoutComponent
+    LogoutComponent,
+    ListaMensajesComponent,
+    AgregarEstudioComponent,
+    ModificarEstudioComponent,
+    ExperienciaLaboralComponent,
+    AgregarTrabajoComponent,
+    ModificarTrabajoComponent
   ],
   imports: [
     BrowserModule,

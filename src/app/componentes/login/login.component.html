@@ -4,13 +4,13 @@
 <div class="container">
 <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
     <div class="mb-3">
-        <label class="form-label">Usuario:</label>
+        <label class="form-label"><b>Usuario:</b></label>
         <input type="text" class="form-control" formControlName="email" placeholder="Ingrese nombre de usuario"
         [controlErrorsTpl]="emailError">
 
     </div>
     <div class="mb-3">
-        <label class="form-label">Contraseña:</label>
+        <label class="form-label"><b>Contraseña:</b></label>
         <input type="password" class="form-control" formControlName="password" placeholder="Ingrese contraseña"
         [controlErrorsTpl]="passwordError">
     </div>

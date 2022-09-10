@@ -11,7 +11,8 @@ export const environment = {
     authDomain: 'login-portfolioweb.firebaseapp.com',
     messagingSenderId: '146216108630',
   },
-  production: false
+  production: false,
+  api: 'http://localhost:8080'
 };
 
 /*
