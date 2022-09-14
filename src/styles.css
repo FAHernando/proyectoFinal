@@ -37,12 +37,12 @@ form textarea{
 }
 .btn{
     margin: 5px;
-    box-shadow: 2px 5px 15px #646464;
+    /*box-shadow: 2px 5px 15px #646464;*/
 }
-.btn:hover{
+/*.btn:hover{
     transform: scale(1.1);
     box-shadow: 2px 5px 20px black;
-}
+}*/
 
 .card{
     width: 100%;

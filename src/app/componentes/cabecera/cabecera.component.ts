@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonaService } from 'src/app/servicios/persona.service';
 import { PortfolioAlexisService } from 'src/app/servicios/portfolio-alexis.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cabecera',
@@ -11,7 +12,8 @@ export class CabeceraComponent implements OnInit {
   /*miPorfolio:any;*/
   header:any;
   constructor(private datosPortfolio:PortfolioAlexisService,
-              private persona:PersonaService) { }
+              private persona:PersonaService,
+              private router: Router) { }
 
   ngOnInit(): void {
     /*this.datosPortfolio.obtenerDatos().subscribe(data => {
@@ -25,5 +27,8 @@ export class CabeceraComponent implements OnInit {
     .subscribe((data:any) => {
       this.header = data;
     })
+  }
+  sobremi(){
+    this.router.navigate(['acerca'])
   }
 }

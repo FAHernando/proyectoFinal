@@ -31,12 +31,15 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onClick(){
+  /*onClick(){
     this.datosPortfolio.logout()
       .then(() => {
         this.router.navigate(['/login']);
       })
       .catch(error => console.log(error));
+  }*/
+  onClick(){
+    this.router.navigate(['/login'])
   }
   
   onSubmit(){

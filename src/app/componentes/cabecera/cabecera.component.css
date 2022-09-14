@@ -37,8 +37,25 @@ h6{
     top: 500px;
     left: 73%;
 }
+.boton .btn:hover{
+    background-color: rgb(177, 51, 2);
+}
 .boton .btn{
     background-color: rgb(253, 72, 0);
     border: none;
     color: black;
+}
+.perfil img{
+    position: absolute;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin-top: -550px;
+    margin-left: 5%;
+    
+}
+@media(max-width: 200px){
+    .perfil img{
+        margin-top: -200px;
+    }
 }

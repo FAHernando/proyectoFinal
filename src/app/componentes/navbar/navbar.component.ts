@@ -18,6 +18,17 @@ export class NavbarComponent implements OnInit {
       this.educacionList=data.education;
     })
   }
- 
+  exp(){
+    this.router.navigate(['experiencia-laboral'])
+  }
+  inicio(){
+    this.router.navigate(['main'])
+  }
+  contacto(){
+    this.router.navigate(['contacto'])
+  }
+  estudio(){
+    this.router.navigate(['estudios'])
+  }
 
 }

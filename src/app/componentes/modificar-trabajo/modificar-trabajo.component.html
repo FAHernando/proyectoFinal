@@ -1,4 +1,4 @@
-<!--<div class="container-md">-->
+
     <form id="agregar-trabajo" [formGroup]="formTrabajo" (submit)="postForm(formTrabajo.value, id)">
         <a name="contacto"><h1><b>Modificar Experiencia Laboral</b></h1></a>
 
@@ -30,10 +30,10 @@
             <label for="exampleFormControlInput1"><b>Logo:</b></label>
             <input formControlName="imagen" data-bs-toggle="mensaje" title="Completa el campo" type="text" placeholder="Imagen">
         </div>
-        <!--<input type="button" value="ENVIAR" id="boton">-->
+       
         <button type="submit" class="btn btn-primary">Guardar</button>
         <button type="reset" class="btn btn-secondary">Borrar</button> 
         <button (click)="volver()" type="button" class="btn btn-dark">Volver</button>
     </form>
-<!--</div>-->
+
 

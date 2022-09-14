@@ -12,17 +12,13 @@
     margin: auto;
     padding: 10px;
     /*background: rgba(0, 0, 0, 0.3);*/
-    background: linear-gradient(27deg, rgb(185, 185, 185), rgba(123, 55, 179, 0.664), rgba(62, 33, 221, 0.575));
+    background: linear-gradient(27deg, rgba(57, 54, 206, 0.87), rgba(144, 137, 247, 0.582), rgb(79, 54, 223, 0.87));
     margin-top: 60px;
-    width: 400px;
+    width: 350px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 2px 5px 30px;
     border: solid 2px rgb(151, 123, 230);
-}
-.container:hover{
-    transform: scale(1.05);
-    box-shadow: 2px 5px 100px rgb(96, 15, 128);
 }
 *{
     font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +48,7 @@ p{
     text-decoration: none;
     cursor:pointer;
     color: #1a2537;
-    font-weight: 500;
+    font-weight: 600;
 }
 .separador{
     color: gray;

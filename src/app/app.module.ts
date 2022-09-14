@@ -25,6 +25,9 @@ import { ExperienciaLaboralComponent } from './componentes/experiencia-laboral/e
 import { AgregarTrabajoComponent } from './componentes/agregar-trabajo/agregar-trabajo.component';
 import { ModificarTrabajoComponent } from './componentes/modificar-trabajo/modificar-trabajo.component';
 
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HardSoftSkillComponent } from './componentes/hard-soft-skill/hard-soft-skill.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,14 +46,17 @@ import { ModificarTrabajoComponent } from './componentes/modificar-trabajo/modif
     ModificarEstudioComponent,
     ExperienciaLaboralComponent,
     AgregarTrabajoComponent,
-    ModificarTrabajoComponent
+    ModificarTrabajoComponent,
+    HardSoftSkillComponent
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgCircleProgressModule.forRoot({}),
     ErrorTailorModule.forRoot({
       errors:{
         useValue:{

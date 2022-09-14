@@ -15,8 +15,16 @@ h3{
 }
 .navbar-brand{
     padding: 0;
+    
 }
 .navbar-brand img{
     width: 150px;
     height: auto;
 }
+li{
+    cursor:pointer;
+}
+li:hover{
+    cursor:pointer;
+}
+
