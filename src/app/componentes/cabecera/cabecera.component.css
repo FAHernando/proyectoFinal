@@ -47,12 +47,12 @@ h6{
 }
 .perfil img{
     position: absolute;
-    border-radius: 50%;
-    width: 220px;
-    height: 220px;
-    margin-top: -550px;
+    border-radius: 40%;
+    width: 210px;
+    height: 250px;
+    margin-top: -450px;
     margin-left: 5%;
-    
+    box-shadow: 2px 3px 10px gray;
 }
 @media(max-width: 200px){
     .perfil img{
